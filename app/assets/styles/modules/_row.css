@@ -1,0 +1,34 @@
+.row {
+	//background-color: yellow;
+	@mixin clearfix;
+
+	&--gutters {
+		margin-right: -65px;
+	}
+	
+	&--gutters > div {
+		padding-right: 65px;
+	}
+
+	&__b-margin-until-md {
+		margin-bottom: 1.2rem;
+	}
+
+	@mixin atMedium {
+		&__md-4 {
+			float: left;
+			width: 33.33%;
+			border: red 1px solid;
+		}
+	
+		&__md-8 {
+			float: left;
+			width: 66.66%;
+			border: blue 1px solid;
+		}
+
+		&__b-margin-until-md {
+			margin-bottom: 0;
+		}
+	}
+}
