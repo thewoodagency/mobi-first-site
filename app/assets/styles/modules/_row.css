@@ -10,12 +10,24 @@
 		padding-right: 65px;
 	}
 
+	&--gutters-small {
+		margin-right: -45px;
+	}
+	
+	&--gutters-small > div {
+		padding-right: 45px;
+	}
+
 	&--gutters-large {
 		margin-right: -100px;
 	}
 	
 	&--gutters-large > div {
 		padding-right: 100px;
+	}
+
+	&--t-padding {
+		padding-top: 80px;
 	}
 
 	&__b-margin-until-md {
@@ -26,7 +38,7 @@
 		&__md-4 {
 			float: left;
 			width: 33.33%;
-			border: red 1px solid;
+			//border: red 1px solid;
 		}
 	
 		&__md-8 {
@@ -42,6 +54,17 @@
 		&__md-6 {
 			float: left;
 			width: 50%;
+		}
+	}
+
+	&--equal-height-at-md {
+		@mixin atMedium {
+			display: flex;
+		}
+
+		& > div {
+			float: none;
+			display: flex;
 		}
 	}
 }
