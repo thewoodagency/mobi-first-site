@@ -1,30 +1,5 @@
 .row {
 	//background-color: yellow;
-	@mixin clearfix;
-
-	&--gutters {
-		margin-right: -65px;
-	}
-	
-	&--gutters > div {
-		padding-right: 65px;
-	}
-
-	&--gutters-small {
-		margin-right: -45px;
-	}
-	
-	&--gutters-small > div {
-		padding-right: 45px;
-	}
-
-	&--gutters-large {
-		margin-right: -100px;
-	}
-	
-	&--gutters-large > div {
-		padding-right: 100px;
-	}
 
 	&--t-padding {
 		padding-top: 80px;
@@ -35,36 +10,57 @@
 	}
 
 	@mixin atMedium {
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+
+		&--gutters {
+			column-gap: 5.3%;
+		}
+	
+		&--gutters-small {
+			column-gap: 3.6%;
+		}
+	
+		&--gutters-large {
+			column-gap: 8%;
+		}
+
 		&__md-4 {
-			float: left;
-			width: 33.33%;
+			grid-column: span 4;
 			//border: red 1px solid;
+		}
+
+		&__md-6 {
+			grid-column: span 6;
 		}
 	
 		&__md-8 {
-			float: left;
-			width: 66.66%;
-			border: blue 1px solid;
+			grid-column: span 8;
 		}
 
 		&__b-margin-until-md {
 			margin-bottom: 0;
 		}
-
-		&__md-6 {
-			float: left;
-			width: 50%;
-		}
 	}
 
 	&--equal-height-at-md {
 		@mixin atMedium {
-			display: flex;
+			& > div {
+				display: flex;
+			}
 		}
+	}
+}
 
-		& > div {
-			float: none;
-			display: flex;
+.row2 {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	column-gap: 20px;
+	border: 1px green solid;
+
+	@mixin atMedium {
+		&__md-4 {
+			width: 100%;
 		}
 	}
 }
