@@ -28,19 +28,27 @@
         </div>
         <div class="site-header__menu-content">
           <div class="site-header__btn-container">
-            <a href="#" class="btn">Get in Touch</a>
+            <a href="#" class="btn open-modal">Get in Touch</a>
           </div>
-          <nav class="primary_nav  site-header__navcon1">
+          <nav class="primary_nav site-header__navcon1">
             <ul>
-              <li><a href="#our-beginning">Our Beginning</a></li>
-              <li><a href="#features">Features</a></li>
-              <li><a href="#testimonials">Testimonials</a></li>
+              <li>
+                <a href="#our-beginning" id="our-beginning-link"
+                  >Our Beginning</a
+                >
+              </li>
+              <li><a href="#features" id="features-link">Features</a></li>
+              <li><a href="#anotherrow" id="anotherrow-link">Another</a></li>
+              <li>
+                <a href="#testimonials" id="testimonials-link">Testimonials</a>
+              </li>
             </ul>
           </nav>
           <nav class="primary_nav site-header__navcon2">
             <ul>
               <li><a href="#our-beginning">Our Beginning</a></li>
               <li><a href="#features">Features</a></li>
+              <li><a href="#anotherrow">Another</a></li>
               <li><a href="#testimonials">Testimonials</a></li>
             </ul>
           </nav>
@@ -87,13 +95,17 @@
             We create soul restoring journeys that inspire you to be you.
           </p>
           <p>
-            <a href="#" class="btn btn--orange btn--large">Get Started Today</a>
+            <a href="#" class="btn btn--orange btn--large open-modal">Get Started Today</a>
           </p>
         </div>
       </div>
     </div>
 
-    <div id="our-beginning" class="page-section">
+    <div
+      id="our-beginning"
+      class="page-section"
+      data-matching-link="#our-beginning-link"
+    >
       <div class="wrapper">
         <h2
           class="headline headline--centered headline--light headline--b-margin-small"
@@ -167,7 +179,11 @@
       </div>
     </div>
 
-    <div id="features" class="page-section page-section--blue">
+    <div
+      id="features"
+      class="page-section page-section--blue"
+      data-matching-link="#features-link"
+    >
       <div class="wrapper">
         <h2 class="section-title">
           <img class="section-title__icon" src="assets/images/icons/star.svg" />
@@ -233,11 +249,13 @@
       </div>
     </div>
 
-    <div id="anotherrow" class="page-section">
+    <div
+      id="anotherrow"
+      class="page-section"
+      data-matching-link="#anotherrow-link"
+    >
       <div class="wrapper">
-        <div
-          class="row2 row--gutters row--gutters-small content-container"
-        >
+        <div class="row2 row--gutters row--gutters-small content-container">
           <div class="row2__md-4">
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -277,6 +295,7 @@
     <div
       id="testimonials"
       class="page-section page-section--no-b-padding-until-md page-section--testimonials"
+      data-matching-link="#testimonials-link"
     >
       <div class="wrapper wrapper--no-padding-until-md">
         <h2 class="section-title section-title__blue">
@@ -367,28 +386,13 @@
           <span class="site-footer__text"
             >Copyright &copy; 2019 Clear View Escapes. All rights reserved.
           </span>
-          <a href="#" class="btn btn--orange">Get in Touch</a>
+          <a href="#" class="btn btn--orange open-modal">Get in Touch</a>
         </p>
       </div>
     </footer>
-    <!-- Leave this commented out HTML here until you need it for an upcoming "modal" lesson
-  <div class="modal">
-    <div class="modal__inner">
-      <h2 class="section-title section-title--blue section-title--less-margin"><img src="assets/images/icons/mail.svg" class="section-title__icon"> Get in <strong>Touch</strong></h2>
-      <div class="wrapper wrapper--narrow">
-        <p class="modal__description">We will have an online order system in place soon. Until then, connect with us on any of the platforms below!</p>
-      </div>
 
-      <div class="social-icons">
-        <a href="#" class="social-icons__icon"><img src="assets/images/icons/facebook.svg" alt="Facebook"></a>
-        <a href="#" class="social-icons__icon"><img src="assets/images/icons/twitter.svg" alt="Twitter"></a>
-        <a href="#" class="social-icons__icon"><img src="assets/images/icons/instagram.svg" alt="Instagram"></a>
-        <a href="#" class="social-icons__icon"><img src="assets/images/icons/youtube.svg" alt="YouTube"></a>
-      </div>
-    </div>
-    <div class="modal__close">X</div>
-  </div>
-  This is the end of the "modal" reference HTML -->
+    
+
     <script src="bundle.js"></script>
   </body>
 </html>
