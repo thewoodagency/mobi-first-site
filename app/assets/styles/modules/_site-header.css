@@ -1,5 +1,4 @@
 .site-header {
-	border: 1px blue solid;
 	position: absolute;
 	padding: 10px 0;
 	width: 100%;
@@ -90,7 +89,7 @@
 		position: absolute;
 		right: 10px;
 		top: 10px;
-		//border: 2px $mainOrange solid;
+		border: 2px $mainOrange solid;
 		z-index: 10;
 
 		&::before {
