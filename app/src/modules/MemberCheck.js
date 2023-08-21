@@ -21,7 +21,7 @@ class MemberCheck {
     Axios.post(
       'https://radiant-licorice-29bb34.netlify.app/.netlify/functions/member_check',
       {
-        key: this.field.ariaValueNow,
+        key: this.field.value,
       }
     )
       .then((response) => {
