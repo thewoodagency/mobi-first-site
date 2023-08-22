@@ -4,6 +4,16 @@ import Scroll from './modules/Scroll';
 import StickHeader from './modules/StickyHeader';
 import MemberCheck from './modules/MemberCheck';
 
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import SampleComponent from './modules/SampleComponent';
+
+ReactDOM.createRoot(document.querySelector('#reactcomponent')).render(
+  <React.StrictMode>
+    <SampleComponent />
+  </React.StrictMode>
+);
+
 new MemberCheck();
 new MobileMenu();
 new Scroll(document.querySelectorAll('.feature-item'), 75);
